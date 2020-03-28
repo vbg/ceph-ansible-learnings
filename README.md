@@ -6,7 +6,7 @@
 
 * I repeatedly got stuck at task [ceph-mgr : get keys from monitors], finally I hacked it. The change I made was in the file **roles/ceph-mgr/tasks/common.yml**.  
   Modified Task **"name: create and copy keyrings"** by replacing delegation. original line is commented and the change is now active.   
-   **delegate_to: "{{ groups[mon_group_name][0] if running_mon is undefined else running_mon }}"**
+   **delegate_to: "{{ groups[mon_group_name][0] if running_mon is undefined else running_mon }}"**  
    *#delegate_to: "{{ groups[mon_group_name][0] }}" -- above change by vbg*
 
 * Another change done by me was to restrict monitor to version 2. Change in groups/all.yml :  
