@@ -34,4 +34,4 @@
     - **$ rm -rf /var/lib/ceph** 
     - **$ rm -rf /var/run/ceph** 
 
-* **NOTE** - The above paths and commands are for containerised deployment on CentOS7 for nautilus
+* **NOTE** - The above paths and commands are for containerised deployment on CentOS7 for nautilus. Also, if OSDs have been created and then the error occurs, please remove all LVs, VGs, PVs created by ceph-ansible before restarting the installer..
